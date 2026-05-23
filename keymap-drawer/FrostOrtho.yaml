@@ -20,7 +20,7 @@ layers:
   - J
   - K
   - L
-  - {t: '-', h: JP COLON}
+  - {t: '-', h: ''''}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -39,7 +39,7 @@ layers:
   - {t: LANG1, h: '4'}
   - BACKSPACE
   - {t: ENTER, h: '1'}
-  - JP COLON
+  - ''''
   - ;
   - DEL
   '1':
@@ -68,9 +68,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - JP CARET
-  - JP TILDE
-  - JP YEN
+  - '='
+  - +
+  - '0x89'
   - F11
   - F11
   - {t: ▽, type: trans}
@@ -92,9 +92,9 @@ layers:
   - +
   - {t: ▽, type: trans}
   - ^
-  - JP QUOTE
-  - JP LPAREN
-  - JP RPAREN
+  - '&'
+  - '*'
+  - (
   - /
   - '4'
   - '5'
@@ -110,11 +110,11 @@ layers:
   - '2'
   - '3'
   - .
-  - JP BACKQUOTE
-  - JP LBRACKET
-  - JP RBRACKET
-  - JP LBRACE
-  - JP RBRACE
+  - '{'
+  - ']'
+  - \
+  - '}'
+  - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -123,8 +123,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - JP UNDERSCORE
-  - JP AT
+  - Sft+0x87
+  - '['
   - '|'
   '3':
   - ESCAPE
