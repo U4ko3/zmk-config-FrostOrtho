@@ -82,7 +82,7 @@ layers:
   - DEL
   - {type: held}
   - {t: ▽, type: trans}
-  - '&KP F13'
+  - F13
   - F12
   '2':
   - '-'
