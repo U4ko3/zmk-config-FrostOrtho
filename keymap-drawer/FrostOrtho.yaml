@@ -71,7 +71,7 @@ layers:
   - '='
   - +
   - '0x89'
-  - F11
+  - Sft+0x89
   - F11
   - LEFT SHIFT
   - {t: ▽, type: trans}
