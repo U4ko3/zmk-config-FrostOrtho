@@ -1,16 +1,16 @@
 layout: {zmk_keyboard: FrostOrtho}
 layers:
   default:
-  - Q
+  - {t: Q, h: LEFT SHIFT}
   - W
   - E
   - R
   - T
   - Y
-  - U
+  - {t: U, h: '5'}
   - I
   - O
-  - P
+  - {t: P, h: '-'}
   - A
   - S
   - D
@@ -20,7 +20,7 @@ layers:
   - J
   - K
   - L
-  - {t: '-', h: '5'}
+  - {t: '-', h: JP COLON}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -30,18 +30,18 @@ layers:
   - M
   - ','
   - .
-  - {t: /, h: '7'}
+  - {t: /, h: ;}
   - {t: TAB, h: LEFT CONTROL}
   - LEFT WIN
   - LEFT ALT
-  - {t: LANG HANJA, h: '7'}
+  - {t: LANG HANJA, h: '3'}
   - {t: SPACE, h: '2'}
-  - {t: LANG1, h: '3'}
-  - {t: ENTER, h: '1'}
+  - {t: LANG1, h: '4'}
   - BACKSPACE
-  - {t: ▽, type: trans}
-  - {t: F10, h: '4'}
-  - {t: INTERNATIONAL 1, h: RIGHT SHIFT}
+  - {t: ENTER, h: '1'}
+  - JP COLON
+  - ;
+  - DEL
   '1':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -68,101 +68,101 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - JP CARET
+  - JP TILDE
+  - JP YEN
   - F11
-  - F12
+  - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - DEL
+  - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ESCAPE
+  - '&KP F13'
+  - F12
   '2':
-  - /
+  - '-'
   - '7'
   - '8'
   - '9'
-  - Sft+'
-  - Sft+3
-  - Sft+4
-  - Sft+5
-  - Sft+6
-  - '['
-  - '-'
+  - +
+  - {t: ▽, type: trans}
+  - ^
+  - JP QUOTE
+  - JP LPAREN
+  - JP RPAREN
+  - /
   - '4'
   - '5'
   - '6'
-  - Sft+;
-  - Sft+2
-  - Sft+7
-  - Sft+[
-  - Sft+8
-  - Sft+9
-  - {t: '0', h: LEFT SHIFT}
+  - '*'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '&mt NUMBER_0'
   - '1'
   - '2'
   - '3'
   - .
-  - ;
-  - ''''
-  - Sft+INT YEN
-  - ']'
-  - \
-  - {t: Sft+-, h: LEFT CONTROL}
-  - ENTER
+  - JP BACKQUOTE
+  - JP LBRACKET
+  - JP RBRACKET
+  - JP LBRACE
+  - JP RBRACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Sft+1
-  - '='
+  - JP UNDERSCORE
+  - JP AT
+  - '|'
   '3':
   - ESCAPE
-  - {t: ▽, type: trans}
+  - Ctl+Sft+TAB
   - UP ARROW
+  - '&LC(TAB)'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+Ctl+LEFT ARROW
+  - Gui+Ctl+RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - HOME
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - END
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
   - {t: ▽, type: trans}
   - LEFT SHIFT
+  - Gui+Ctl+LEFT ARROW
+  - {t: ▽, type: trans}
+  - Gui+Ctl+RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+PAGE UP
+  - Ctl+PG DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -204,11 +204,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - BT CLR ALL
   '5':
   - {t: ▽, type: trans}
@@ -217,20 +217,20 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -259,9 +259,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&rans'
   - '&mkp MB1'
-  - '&mkp MB2'
   - '&mkp MB3'
+  - '&mkp MB2'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -269,19 +279,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MB4'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -324,7 +324,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
