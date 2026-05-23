@@ -78,7 +78,7 @@
             &zip_xy_to_scroll_mapper
             //&zip_scroll_x_scaler 0 3 // X軸スクロール量0/3倍
             //&zip_scroll_y_scaler 2 3 // Y軸スクロール量2/3倍
-
+        >;
     };
     scroller_x {
         layers = <7>; // 横スクロールレイヤー
