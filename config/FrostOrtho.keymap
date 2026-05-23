@@ -137,7 +137,7 @@
 &kp ESCAPE      &kp JP_HANZEN  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK              &kp F1        &kp F2        &kp F3      &kp F4       &kp F5
 &kp TAB         &trans         &kp INSERT       &kp HOME        &kp PAGE_UP                  &kp F6        &kp F7        &kp F8      &kp F9       &kp F10
 &kp CAPS        &trans         &kp DELETE       &kp END         &kp PAGE_DOWN                &kp JP_CARET  &kp JP_TILDE  &kp JP_YEN  &kp JP_PIPE  &kp F11
-&kp LEFT_SHIFT  &trans         &trans           &trans          &trans           &trans      &kp DEL       &trans        &trans      &KP F13      &kp F12
+&kp LEFT_SHIFT  &trans         &trans           &trans          &trans           &trans      &kp DEL       &trans        &trans      &kp F13      &kp F12
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
