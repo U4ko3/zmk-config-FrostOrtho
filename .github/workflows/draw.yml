@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   # push時に自動で実行する場合は、以下のコメントアウトを外す
   push:
+    branches:
+      - my-custom
     paths:
       - "config/FrostOrtho.keymap"
       - "keymap_drawer.config.yaml"
