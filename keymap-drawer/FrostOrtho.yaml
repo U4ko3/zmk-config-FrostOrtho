@@ -43,37 +43,37 @@ layers:
   - ;
   - DEL
   '1':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ESCAPE
+  - '`'
+  - PRINTSCREEN
+  - SCROLLLOCK
+  - PAUSE BREAK
   - F1
   - F2
   - F3
   - F4
   - F5
+  - TAB
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - INSERT
+  - HOME
+  - PAGE UP
   - F6
   - F7
   - F8
   - F9
   - F10
+  - CAPS
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DELETE
+  - END
+  - PAGE DOWN
   - '='
   - +
   - '0x89'
   - F11
   - F11
-  - {t: ▽, type: trans}
+  - LEFT SHIFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
