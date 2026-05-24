@@ -21,12 +21,14 @@
 
 &zip_temp_layer {
     // キー入力後400ms以内はAMLに切り替わらない
-    require-prior-idle-ms = <400>;
+    // require-prior-idle-ms = <400>;
     // AMLから離脱しないキー
     excluded-positions = <
+        5 // y 左クリック
         6 // U 左クリック
         7 // I 右クリック
-        8 // O 中央クリック
+        15 // 戻るクリック
+        17 // 進むクリック
         20 // Z Shift
         30 // Control
         32 // Alt
