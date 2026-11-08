@@ -50,7 +50,6 @@
     active-layers = <BIT(5)>;
     scale-multiplier = <2>; // スクロール量2/3倍
     scale-divisor = <3>;
-    x-invert; // スクロール方向調整
     y-invert;
 };
 
