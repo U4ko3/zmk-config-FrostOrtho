@@ -1,13 +1,13 @@
 layout: {zmk_keyboard: FrostOrtho}
 layers:
-  default:
+  DEFAULT:
   - {t: Q, h: LEFT SHIFT}
   - W
   - E
   - R
   - T
   - Y
-  - {t: U, h: '5'}
+  - {t: U, h: SCROOL}
   - I
   - O
   - {t: P, h: '-'}
@@ -34,15 +34,15 @@ layers:
   - {t: TAB, h: LEFT CONTROL}
   - LEFT WIN
   - LEFT ALT
-  - {t: LANG HANJA, h: '4'}
-  - {t: SPACE, h: '3'}
-  - {t: LANG1, h: '2'}
+  - {t: LANG HANJA, h: BLUETOOTH}
+  - {t: SPACE, h: CURSOR}
+  - {t: LANG1, h: NUMBER}
   - BACKSPACE
-  - {t: ENTER, h: '1'}
+  - {t: ENTER, h: FUNCTION}
   - ''''
   - ;
   - DEL
-  '1':
+  FUNCTION:
   - ESCAPE
   - '`'
   - PRINTSCREEN
@@ -84,7 +84,7 @@ layers:
   - {t: ▽, type: trans}
   - F13
   - F12
-  '2':
+  NUMBER:
   - '-'
   - '7'
   - '8'
@@ -126,7 +126,7 @@ layers:
   - Sft+0x87
   - '['
   - '|'
-  '3':
+  CURSOR:
   - ESCAPE
   - Ctl+Sft+TAB
   - UP ARROW
@@ -168,7 +168,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '4':
+  BLUETOOTH:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -210,7 +210,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR ALL
-  '5':
+  SCROOL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -252,7 +252,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '6':
+  MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -294,7 +294,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '7':
+  VSCROOL:
   - Ctl+Z
   - Ctl+Y
   - {t: ▽, type: trans}
