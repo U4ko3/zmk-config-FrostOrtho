@@ -161,10 +161,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&mt LEFT_SHIFT Q      &kp W         &kp E         &kp R             &kp T                         &kp Y          &lt 5 U      &kp I         &kp O          &mt MINUS P
-&kp A                 &kp S         &kp D         &kp F             &kp G                         &kp H          &kp J        &kp K         &kp L          &mt JP_COLON MINUS
-&mt LEFT_SHIFT Z      &kp X         &kp C         &kp V             &kp B                         &kp N          &kp M        &kp COMMA     &kp DOT        &mt SEMICOLON SLASH
-&mt LEFT_CONTROL TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 LANG_HANJA  &lt 3 SPACE  &lt 2 LANG1      &kp BACKSPACE  &lt 1 ENTER  &kp JP_COLON  &kp SEMICOLON  &kp DEL
+&mt LEFT_SHIFT Q      &kp W         &kp E         &kp R             &kp T                       &kp Y          &lt 5 U      &kp I         &kp O          &mt MINUS P
+&kp A                 &kp S         &kp D         &kp F             &lt 7 G                     &kp H          &kp J        &kp K         &kp L          &mt JP_COLON MINUS
+&mt LEFT_SHIFT Z      &kp X         &kp C         &kp V             &lt 4 B                     &kp N          &kp M        &kp COMMA     &kp DOT        &mt SEMICOLON SLASH
+&mt LEFT_CONTROL TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANG_HANJA  &lt 2 SPACE  &kp LANG1      &kp BACKSPACE  &lt 1 ENTER  &kp JP_COLON  &kp SEMICOLON  &kp DEL
             >;
 
             sensor-bindings = <&rsr_page &rsr_trans>;
