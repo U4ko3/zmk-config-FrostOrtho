@@ -259,7 +259,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB1'
-  - {t: ▽, type: trans}
+  - '&mouse_gesture_kp 0 U'
   - '&mkp MB2'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
