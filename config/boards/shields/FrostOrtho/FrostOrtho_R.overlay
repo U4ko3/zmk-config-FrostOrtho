@@ -89,7 +89,7 @@
             &mouse_runtime_input_processor
             &zip_mouse_gesture // マウスジェスチャー（方向調整後に置くこと）
             &scroll_runtime_input_processor
-            &hscroll_runtime_input_processor
+            &vscroll_runtime_input_processor
         >;
     };
 };
