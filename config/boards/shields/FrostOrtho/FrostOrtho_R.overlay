@@ -66,6 +66,7 @@
         active-layers = <BIT(7)>;
         scale-multiplier = <2>; // スクロール量2/3倍
         scale-divisor = <3>;
+        y-invert; // スクロール方向調整
         rotation-degrees = <0>;
         track-remainders;
         axis-snap-mode = <AXIS_SNAP_MODE_Y>; // 縦方向のみ
