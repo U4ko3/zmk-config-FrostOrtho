@@ -221,7 +221,6 @@
         scrool_layer {
             display-name = "SCROOL";
             bindings = <
-            bindings = <
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
