@@ -15,7 +15,7 @@ layers:
   - S
   - D
   - F
-  - G
+  - {t: G, h: VSCROOL}
   - H
   - J
   - K
@@ -25,7 +25,7 @@ layers:
   - X
   - C
   - V
-  - B
+  - {t: B, h: BLUETOOTH}
   - N
   - M
   - ','
@@ -34,9 +34,9 @@ layers:
   - {t: TAB, h: LEFT CONTROL}
   - LEFT WIN
   - LEFT ALT
-  - {t: LANG HANJA, h: BLUETOOTH}
-  - {t: SPACE, h: CURSOR}
-  - {t: LANG1, h: NUMBER}
+  - {t: LANG HANJA, h: CURSOR}
+  - {t: SPACE, h: NUMBER}
+  - LANG1
   - BACKSPACE
   - {t: ENTER, h: FUNCTION}
   - ''''
@@ -119,8 +119,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Sft+0x87
@@ -160,8 +160,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -193,7 +193,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -202,7 +202,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&bootloader'
@@ -309,7 +309,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
