@@ -42,7 +42,7 @@
     temp-layer-deactivation-delay-ms = <65535>; // タイムアウト時間（最大65535ms）
 };
 
-// 縦スクロール（レイヤー5）
+// 縦横スクロール（レイヤー5）
 &scroll_runtime_input_processor {
     x-codes = <INPUT_REL_X>; // トラックボールのXYを受けてスクロールに変換する
     y-codes = <INPUT_REL_Y>;
@@ -52,15 +52,13 @@
     scale-divisor = <3>;
     x-invert; // スクロール方向調整
     y-invert;
-    axis-snap-mode = <AXIS_SNAP_MODE_Y>; // 縦方向のみ
-    axis-snap-threshold = <65535>; // 横方向へのロック解除をしない
 };
 
 / {
-    // 横スクロール（レイヤー7）
-    hscroll_runtime_input_processor: hscroll_runtime_input_processor {
+    // 縦スクロール（レイヤー7）
+    vscroll_runtime_input_processor: vscroll_runtime_input_processor {
         compatible = "zmk,input-processor-runtime";
-        processor-label = "hscroll";
+        processor-label = "vscroll";
         type = <INPUT_EV_REL>;
         x-codes = <INPUT_REL_X>;
         y-codes = <INPUT_REL_Y>;
@@ -70,8 +68,8 @@
         scale-divisor = <3>;
         rotation-degrees = <0>;
         track-remainders;
-        axis-snap-mode = <AXIS_SNAP_MODE_X>; // 横方向のみ
-        axis-snap-threshold = <65535>; // 縦方向へのロック解除をしない
+        axis-snap-mode = <AXIS_SNAP_MODE_Y>; // 縦方向のみ
+        axis-snap-threshold = <65535>; // 横方向へのロック解除をしない
 
         temp-layer-transparent-behavior = <&trans>;
         temp-layer-kp-behavior = <&kp>;
@@ -91,7 +89,7 @@
             &mouse_runtime_input_processor
             &zip_mouse_gesture // マウスジェスチャー（方向調整後に置くこと）
             &scroll_runtime_input_processor
-            &hscroll_runtime_input_processor
+            &vscroll_runtime_input_processor
         >;
     };
 };

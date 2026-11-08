@@ -41,7 +41,7 @@
     quick-tap-ms = <0>;
 };
 
-// マウスジェスチャー（AMLのYキーを長押ししながらボールを動かす）
+// マウスジェスチャー（AMLのUキーを長押ししながらボールを動かす）
 &zip_mouse_gesture {
     stroke-size = <50>; // 1ストロークと判定する移動量
     enable-eager-mode;
@@ -49,11 +49,11 @@
 
     history_back {
         pattern = <GESTURE_LEFT>;
-        bindings = <&kp LA(LEFT)>; // 戻る
+        bindings = <&kp LG(LC(LEFT_ARROW))>; // 仮想デスクトップ左
     };
     history_forward {
         pattern = <GESTURE_RIGHT>;
-        bindings = <&kp LA(RIGHT)>; // 進む
+        bindings = <&kp LG(LC(RIGHT_ARROW))>; // 仮想デスクトップ右
     };
     prev_tab {
         pattern = <GESTURE_UP>;
@@ -233,10 +233,10 @@
         MOUSE {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans              &mkp MB1  &trans    &mkp MB2  &trans    &trans
-&trans  &trans  &trans  &trans  &trans              &mkp MB4  &mkp MB3  &mkp MB5  &trans    &trans
-&trans  &trans  &trans  &trans  &trans              &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans              &mkp MB1  &mouse_gesture_kp 0 U    &mkp MB2  &trans    &trans
+&trans  &trans  &trans  &trans  &trans              &mkp MB4  &mkp MB3                 &mkp MB5  &trans    &trans
+&trans  &trans  &trans  &trans  &trans              &trans    &trans                   &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans                   &trans    &trans    &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
