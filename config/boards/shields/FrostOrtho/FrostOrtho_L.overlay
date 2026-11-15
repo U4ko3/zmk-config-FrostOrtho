@@ -1,5 +1,8 @@
 #include "FrostOrtho.dtsi"
-#include <behaviors/battery_history_request.dtsi>
+/* FrostOrtho.dtsi 内で RC(row,col) のマトリクス展開が終わった後に include する
+   (ZMK v0.4 では LEFT 側でも runtime processor ノードを定義しないと
+   processor-label エラーになるため) */
+#include <input/processors/runtime-input-processor.dtsi>
 
 &kscan0 {
         col-gpios

@@ -16,14 +16,20 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
-
+# NOTE: ZMK v0.4 (Zephyr 4.1 / HWMv2) でボード名が
+#       `seeeduino_xiao_ble` から `xiao_ble` へ変更され、さらに ZMK 用の
+#       ボードバリアント指定 `/nrf52840/zmk` が必須になった。
+---
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble/nrf52840/zmk
     shield: FrostOrtho_R rgbled_adapter # zmk-rgbled-widgetを使用する場合はこっちを使う
     #shield: FrostOrtho_R
     snippet: studio-rpc-usb-uart
-  - board: seeeduino_xiao_ble
+    artifact-name: FrostOrtho_R
+  - board: xiao_ble/nrf52840/zmk
     shield: FrostOrtho_L rgbled_adapter # zmk-rgbled-widgetを使用する場合はこっちを使う
     #shield: FrostOrtho_L
-  - board: seeeduino_xiao_ble
+    artifact-name: FrostOrtho_L
+  - board: xiao_ble/nrf52840/zmk
     shield: settings_reset
+    artifact-name: settings_reset

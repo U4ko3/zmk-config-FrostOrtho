@@ -29,6 +29,9 @@ FrostOrthoをご購入いただきありがとうございます！
 - キーマップ変更方法  
 [キーマップ変更方法](./doc/キーマップ変更方法.md)
 
+- ZMK v0.4 移行と DYA Studio からのマウスジェスチャー編集  
+[ZMK v0.4 移行とマウスジェスチャー](./doc/ZMK-v0.4移行とマウスジェスチャー.md)
+
 ## 各種リンク
 - ケースデータ：[FrostOrtho-3dprint-data](https://github.com/imo00o/FrostOrtho-3dprint-data)  
 個人利用の範囲でしたらご自由に使用・改変いただけます。改変して頒布したいなどあればお気軽にご相談ください。    

@@ -5,7 +5,6 @@
 #include <input/processors/runtime-input-processor.dtsi>
 #include <dt-bindings/zmk/runtime_input_processor.h>
 #include <zephyr/dt-bindings/dt-util.h>
-#include <behaviors/battery_history_request.dtsi>
 #include <mouse-gesture.dtsi>
 
 &default_transform {
@@ -80,6 +79,14 @@
 };
 
 / {
+    // 慣性スクロール（zmk-module-mouse-gesture-rpc 提供）
+    // 有効/無効やパラメータは DYA Studio のマウスジェスチャー画面から変更・保存できる
+    inertial_scroll: inertial_scroll {
+        compatible = "zmk,input-processor-inertial-scroll";
+        status = "okay";
+        #input-processor-cells = <0>;
+    };
+
     trackball_listener: trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
@@ -90,6 +97,7 @@
             &zip_mouse_gesture // マウスジェスチャー（方向調整後に置くこと）
             &scroll_runtime_input_processor
             &vscroll_runtime_input_processor
+            &inertial_scroll // 慣性スクロール（既定は無効。DYA Studio のマウスジェスチャー画面から有効化）
         >;
     };
 };

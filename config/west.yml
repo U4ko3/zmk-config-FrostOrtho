@@ -2,48 +2,92 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar
+    - name: caksoylar  # RGB LED
       url-base: https://github.com/caksoylar
     - name: sekigon-gonnoc  # PAW3222
       url-base: https://github.com/sekigon-gonnoc
-    - name: cormoran
+    - name: cormoran  # DYA Studio (custom ZMK fork + modules)
       url-base: https://github.com/cormoran
-    - name: imo00o
-      url-base: https://github.com/imo00o
-    - name: kot149  # マウスジェスチャー
-      url-base: https://github.com/kot149
+    - name: shakushakupanda  # マウスジェスチャー (kot149 fork + DYA Studio RPC)
+      url-base: https://github.com/shakushakupanda
   projects:
-    #　- name: zmk
-    #   remote: zmkfirmware
-    #   revision: v0.3.0
+    # ── ZMK 本体 ────────────────────────────────────────────────
+    # cormoran さんの DYA Studio 向けブランチ (ZMK v0.4 系 / Zephyr 4.1)。
+    # 旧 `v0.3-branch+dya` (Zephyr 3.5) から移行。
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: main+dya
       import: app/west.yml
-    - name: zmk-driver-paw3222
-      remote: sekigon-gonnoc
-      revision: main
-    - name: zmk-mouse-gesture
-      remote: kot149
-      revision: v1
-    - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: v0.3.0
-    # DYA Studio モジュール
-    - name: zmk-module-ble-management
+
+    # ── DYA Studio 共通基盤 ─────────────────────────────────────
+    - name: zmk-feature-custom-settings
       remote: cormoran
-      revision: zmk-v0.3.0.0
-    - name: zmk-module-battery-history
+      revision: main
+    - name: zmk-module-ble-management
       remote: cormoran
       revision: main
     - name: zmk-module-settings-rpc
       remote: cormoran
-      revision: zmk-v0.3.0.0
+      revision: main
     - name: zmk-module-runtime-input-processor
       remote: cormoran
-      revision: zmk-v0.3.0.0
+      revision: main
     - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
-      revision: zmk-v0.3.0.0
+      revision: main
+
+    # ── マクロ / コンボのランタイム編集 ─────────────────────────
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: main
+
+    # ── DYA Studio の診断タブ用 ─────────────────────────────────
+    - name: zmk-feature-kscan-diagnostics
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-input-stream
+      remote: cormoran
+      revision: main
+    - name: zmk-module-devtool
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-device-info
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-watchdog
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-zephyr-setting-expose
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-studio-rpc-perf
+      remote: cormoran
+      revision: main
+
+    # ── センサー / LED ──────────────────────────────────────────
+    - name: zmk-driver-paw3222
+      remote: sekigon-gonnoc
+      revision: main
+    # v0.3.0 は Zephyr 3.5 向けなので main (ZMK v0.4 向け) へ切替
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+      revision: main
+
+    # ── マウスジェスチャー ──────────────────────────────────────
+    # kot149/zmk-mouse-gesture の fork。DYA Studio からジェスチャーを
+    # 書き換えるための runtime API (zmk_mouse_gesture_runtime_set) と、
+    # ジェスチャー中のカーソル停止を追加したブランチ。
+    - name: zmk-mouse-gesture
+      remote: shakushakupanda
+      revision: suppress-cursor-while-active
+    # DYA Studio 用 custom Studio RPC サブシステム (cormoran__mouse_gesture)。
+    # ジェスチャーの追加・編集・削除、ストロークサイズ等の設定を
+    # ファームウェア再ビルドなしで行えるようにする。
+    - name: zmk-module-mouse-gesture-rpc
+      remote: shakushakupanda
+      revision: main
   self:
     path: config

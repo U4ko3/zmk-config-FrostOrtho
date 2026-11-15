@@ -4,8 +4,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <behaviors/runtime-sensor-rotate.dtsi>
 #include <mouse-gesture.dtsi>
+/* DYA Studio からジェスチャーを編集するための &mg_set behavior
+   (zmk-module-mouse-gesture-rpc) */
+#include <mouse-gesture-rpc.dtsi>
+/* DYA Studio で作成したマクロを呼び出す `&rmacro <slot>` (slot 0〜7) */
+#include <behaviors/runtime_macro.dtsi>
 //#include "jp_keycodes.h"
 
 // OS設定を日本語キーボードのまま使用するための変換定義
@@ -41,11 +45,16 @@
     quick-tap-ms = <0>;
 };
 
-// マウスジェスチャー（AMLのUキーを長押ししながらボールを動かす）
+// マウスジェスチャー（AMLのTキーを長押ししながらボールを動かす）
+//
+// ここに書いたジェスチャーは「初期値」で、ジェスチャーセット 0 に読み込まれる。
+// DYA Studio の Subsystems ページ → cormoran__mouse_gesture の Web UI から
+// ジェスチャーの追加・編集・削除、ストロークサイズ等の変更ができ、
+// 保存した内容はこの初期値より優先される（Reset to Defaults でここの値に戻る）。
+// ジェスチャー中のカーソル停止は &mg_set / &mg_kp 押下中に自動で行われる。
 &zip_mouse_gesture {
     stroke-size = <50>; // 1ストロークと判定する移動量
     enable-eager-mode;
-    suppress-movement; // ジェスチャー中はカーソルを動かさない
 
     history_back {
         pattern = <GESTURE_LEFT>;
@@ -66,17 +75,25 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    // コンボ（DYA Studio から編集可能）
+    // ここに書いた内容はコンパイル時デフォルト。DYA Studio で編集したスロットは上書きされ、
+    // Web UI の "Reset to Default" でここの値へ戻せる。
+    // スロット総数は CONFIG_ZMK_RUNTIME_COMBO_MAX_COMBOS (16)。2〜15 は DYA Studio から追加できる。
+    runtime_combo_defaults {
+        compatible = "cormoran,runtime-combo-defaults";
 
         tab {
-            bindings = <&kp TAB>;
+            slot = <0>;
+            display-name = "Tab";
             key-positions = <11 12>;
+            bindings = <&kp TAB>;
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
+            slot = <1>;
+            display-name = "Shift+Tab";
             key-positions = <12 13>;
+            bindings = <&kp LS(TAB)>;
         };
     };
 
@@ -110,6 +127,37 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+        };
+
+        // マウスジェスチャーキー
+        // &mg_kp <セット番号> <タップ時のキー> : 長押しでジェスチャー、タップでキー入力
+        mg_kp: mg_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MG_KP";
+            bindings = <&mg_set>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        // DYA Studio のキーマップエディタから割り当てやすいパラメータなし版
+        // （押している間、指定セットのジェスチャーを有効にする）
+        mg_set_0: behavior_mg_set_0 {
+            compatible = "zmk,behavior-mg-set-fixed";
+            #binding-cells = <0>;
+            display-name = "Mouse Gesture Key 0";
+        };
+
+        mg_set_1: behavior_mg_set_1 {
+            compatible = "zmk,behavior-mg-set-fixed";
+            #binding-cells = <0>;
+            display-name = "Mouse Gesture Key 1";
+        };
+
+        mg_set_2: behavior_mg_set_2 {
+            compatible = "zmk,behavior-mg-set-fixed";
+            #binding-cells = <0>;
+            display-name = "Mouse Gesture Key 2";
         };
 
         // Kyemap Editor用
@@ -233,7 +281,7 @@
         MOUSE {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &mouse_gesture_kp 0 T          &mkp MB1  &trans   &mkp MB2  &trans    &trans
+&trans  &trans  &trans  &trans  &mg_kp 0 T        &mkp MB1  &trans   &mkp MB2  &trans    &trans
 &trans  &trans  &trans  &trans  &trans                         &mkp MB4  &mkp MB3 &mkp MB5  &trans    &trans
 &trans  &trans  &trans  &trans  &trans                         &trans    &trans   &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans                &trans   &trans    &trans   &trans    &trans    &trans
