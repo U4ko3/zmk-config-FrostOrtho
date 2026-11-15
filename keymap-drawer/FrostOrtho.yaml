@@ -257,7 +257,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mouse_gesture_kp 0 T'
+  - {t: T, h: '&mg_set'}
   - '&mkp MB1'
   - {t: ▽, type: trans}
   - '&mkp MB2'
@@ -336,8 +336,3 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [11, 12]
-  k: TAB
-- p: [12, 13]
-  k: Sft+TAB
